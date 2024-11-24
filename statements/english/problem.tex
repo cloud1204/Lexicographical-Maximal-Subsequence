@@ -1,0 +1,47 @@
+\begin{problem}{最大字典序子序列 (maxlex)}{standard input}{standard output}{3 seconds}{256 megabytes}
+
+給你 $n$ 個字串：$s_1, s_2, s_3, \ldots, s_n$。
+
+你可以選擇其中一部分的字串，並將他們按照編號的大小順序黏起來。
+
+請問能得到的最大字典序的合成字串是什麼？
+
+字典序的定義如下：先比較第一個字母的大小，如果第一個字母一樣，那麼比較第二個、第三個乃至後面的字母，直到比到能分出高下的位置（比如，\t{cat} 的字典序比 \t{can} 大）。如果比到最後都沒分出高下，而兩個單詞不一樣長（比如，\t{sigh} 和 \t{sight}），那麼比較長的字典序比較大。
+
+
+\InputFile
+第一行包含一個正整數 $n$。
+
+第二行包含 $n$ 個字串：$s_1 \;\; s_2 \;\; \ldots \;\; s_n$。
+
+
+\OutputFile
+輸出最大字典序的合成字串。
+
+
+\Scoring
+\begin{itemize}
+  \item $1 \le n \le 10^6$。
+  \item $\sum_{i=1}^n |s_i| \le 10^6$。
+  \item 輸入的字串都只由小寫英文字母組成。
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{ccl} \hline
+  \bf{子任務} & \bf{分數} & \bf{額外輸入限制} \\ \hline
+  $1$ & $26$ & $|s_i| = 1$（$1 \le i \le n$）。 \\
+  $2$ & $41$ & $\sum_{i=1}^n |s_i| \le 5000$。 \\
+  $3$ & $33$ & 無額外限制。 \\
+\hline \end{tabular}
+\end{center}
+
+
+\Examples
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\exmpfile{example.02}{example.02.a}%
+\end{example}
+
+\end{problem}
+
